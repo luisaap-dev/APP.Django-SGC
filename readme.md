@@ -85,10 +85,7 @@ DATABASES = {
 }
 ```
 ## Licencia
-
 Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
 
 ## Autor
-
 Este proyecto fue creado por Luis Ares. Puedes encontrar más información sobre el autor en su perfil de GitHub: [@luisaap-dev](https://github.com/luisaap-dev).
-```
