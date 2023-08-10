@@ -1,0 +1,652 @@
+[
+    {
+        "model": "crudpy.cliente",
+        "pk": 1,
+        "fields": {
+            "nombre": "Juan Pérez",
+            "direccion": "Calle 123, Colonia Centro",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-123-4567",
+            "email": "juan@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 2,
+        "fields": {
+            "nombre": "María García",
+            "direccion": "Avenida Principal, Colonia Reforma",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-987-6543",
+            "email": "maria@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 3,
+        "fields": {
+            "nombre": "Carlos Rodríguez",
+            "direccion": "Calle 456, Colonia Juárez",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-555-7890",
+            "email": "carlos@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 4,
+        "fields": {
+            "nombre": "Ana López",
+            "direccion": "Paseo de la Reforma 789",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-789-1234",
+            "email": "ana@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 5,
+        "fields": {
+            "nombre": "Pedro Sánchez",
+            "direccion": "Av. Hidalgo 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-567-8901",
+            "email": "pedro@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 6,
+        "fields": {
+            "nombre": "Laura Ramírez",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-222-3333",
+            "email": "laura@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 7,
+        "fields": {
+            "nombre": "Ricardo Torres",
+            "direccion": "Av. Revolución 1234",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-555-7777",
+            "email": "ricardo@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 8,
+        "fields": {
+            "nombre": "Carmen González",
+            "direccion": "Calle 567, Colonia Condesa",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-444-8888",
+            "email": "carmen@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 9,
+        "fields": {
+            "nombre": "Andrés Mendoza",
+            "direccion": "Av. Insurgentes 789",
+            "ciudad": "Tijuana",
+            "pais": "México",
+            "telefono": "664-123-4567",
+            "email": "andres@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 10,
+        "fields": {
+            "nombre": "Luisa Morales",
+            "direccion": "Calle 234, Colonia Polanco",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-999-1111",
+            "email": "luisa@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 11,
+        "fields": {
+            "nombre": "Jorge Herrera",
+            "direccion": "Av. Reforma 5678",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-777-2222",
+            "email": "jorge@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 12,
+        "fields": {
+            "nombre": "Sofía Ortiz",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-666-3333",
+            "email": "sofia@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 13,
+        "fields": {
+            "nombre": "Héctor Navarro",
+            "direccion": "Av. Juárez 123",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-888-5555",
+            "email": "hector@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 14,
+        "fields": {
+            "nombre": "Valeria Torres",
+            "direccion": "Calle 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-444-7777",
+            "email": "valeria@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 15,
+        "fields": {
+            "nombre": "Roberto Méndez",
+            "direccion": "Av. Revolución 567",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-333-6666",
+            "email": "roberto@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 16,
+        "fields": {
+            "nombre": "Alejandra Ríos",
+            "direccion": "Calle 789, Colonia Condesa",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-777-2222",
+            "email": "alejandra@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 17,
+        "fields": {
+            "nombre": "Fernando Silva",
+            "direccion": "Av. Insurgentes 456",
+            "ciudad": "Tijuana",
+            "pais": "México",
+            "telefono": "664-987-1234",
+            "email": "fernando@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 18,
+        "fields": {
+            "nombre": "Mariana Vargas",
+            "direccion": "Calle 234, Colonia Polanco",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-111-9999",
+            "email": "mariana@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 19,
+        "fields": {
+            "nombre": "Pablo Nava",
+            "direccion": "Av. Reforma 1234",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-222-5555",
+            "email": "pablo@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 20,
+        "fields": {
+            "nombre": "Daniela Paredes",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-888-3333",
+            "email": "daniela@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 21,
+        "fields": {
+            "nombre": "Gustavo Mendoza",
+            "direccion": "Av. Juárez 567",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-555-8888",
+            "email": "gustavo@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 22,
+        "fields": {
+            "nombre": "Lorena Medina",
+            "direccion": "Calle 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-777-1111",
+            "email": "lorena@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 23,
+        "fields": {
+            "nombre": "Roberto Cervantes",
+            "direccion": "Av. Revolución 789",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-222-4444",
+            "email": "roberto.c@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 24,
+        "fields": {
+            "nombre": "Sandra Soto",
+            "direccion": "Calle 789, Colonia Condesa",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-444-2222",
+            "email": "sandra@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 25,
+        "fields": {
+            "nombre": "Felipe García",
+            "direccion": "Av. Insurgentes 123",
+            "ciudad": "Tijuana",
+            "pais": "México",
+            "telefono": "664-567-8888",
+            "email": "felipe@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 26,
+        "fields": {
+            "nombre": "Beatriz Ríos",
+            "direccion": "Calle 234, Colonia Polanco",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-666-2222",
+            "email": "beatriz@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 27,
+        "fields": {
+            "nombre": "Raúl Torres",
+            "direccion": "Av. Reforma 4567",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-888-5555",
+            "email": "raul@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 28,
+        "fields": {
+            "nombre": "Gabriela Navarro",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-222-6666",
+            "email": "gabriela@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 29,
+        "fields": {
+            "nombre": "Miguel Sánchez",
+            "direccion": "Av. Juárez 5678",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-777-1111",
+            "email": "miguel@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 30,
+        "fields": {
+            "nombre": "Isabel Vargas",
+            "direccion": "Calle 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-999-3333",
+            "email": "isabel@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 31,
+        "fields": {
+            "nombre": "Fernando Méndez",
+            "direccion": "Av. Revolución 7890",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-555-7777",
+            "email": "fernando.m@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 32,
+        "fields": {
+            "nombre": "Cecilia Paredes",
+            "direccion": "Calle 789, Colonia Condesa",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-777-4444",
+            "email": "cecilia@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 33,
+        "fields": {
+            "nombre": "Javier Cervantes",
+            "direccion": "Av. Insurgentes 1234",
+            "ciudad": "Tijuana",
+            "pais": "México",
+            "telefono": "664-123-9999",
+            "email": "javier@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 34,
+        "fields": {
+            "nombre": "Carolina Ríos",
+            "direccion": "Calle 234, Colonia Polanco",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-777-5555",
+            "email": "carolina@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 35,
+        "fields": {
+            "nombre": "Martín Torres",
+            "direccion": "Av. Reforma 456",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-444-6666",
+            "email": "martin@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 36,
+        "fields": {
+            "nombre": "Paula Navarro",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-777-3333",
+            "email": "paula@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 37,
+        "fields": {
+            "nombre": "Luis Torres",
+            "direccion": "Av. Juárez 5678",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-222-7777",
+            "email": "luis@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 38,
+        "fields": {
+            "nombre": "Cristina Vargas",
+            "direccion": "Calle 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-111-5555",
+            "email": "cristina@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 39,
+        "fields": {
+            "nombre": "Andrés Méndez",
+            "direccion": "Av. Revolución 7890",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-888-4444",
+            "email": "andres.m@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 40,
+        "fields": {
+            "nombre": "Ana Paredes",
+            "direccion": "Calle 789, Colonia Condesa",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-444-7777",
+            "email": "ana@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 41,
+        "fields": {
+            "nombre": "Roberto Cervantes",
+            "direccion": "Av. Insurgentes 123",
+            "ciudad": "Tijuana",
+            "pais": "México",
+            "telefono": "664-555-8888",
+            "email": "roberto.c@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 42,
+        "fields": {
+            "nombre": "Sandra Soto",
+            "direccion": "Calle 234, Colonia Polanco",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-777-3333",
+            "email": "sandra@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 43,
+        "fields": {
+            "nombre": "Felipe García",
+            "direccion": "Av. Reforma 4567",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-222-7777",
+            "email": "felipe@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 44,
+        "fields": {
+            "nombre": "Beatriz Ríos",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-444-6666",
+            "email": "beatriz@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 45,
+        "fields": {
+            "nombre": "Raúl Torres",
+            "direccion": "Av. Juárez 5678",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-777-5555",
+            "email": "raul@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 46,
+        "fields": {
+            "nombre": "Carolina Ríos",
+            "direccion": "Calle 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-444-7777",
+            "email": "carolina@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 47,
+        "fields": {
+            "nombre": "Martín Torres",
+            "direccion": "Av. Reforma 456",
+            "ciudad": "Monterrey",
+            "pais": "México",
+            "telefono": "811-666-2222",
+            "email": "martin@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 48,
+        "fields": {
+            "nombre": "Paula Navarro",
+            "direccion": "Calle 789, Colonia Roma",
+            "ciudad": "Ciudad de México",
+            "pais": "México",
+            "telefono": "555-222-7777",
+            "email": "paula@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 49,
+        "fields": {
+            "nombre": "Luis Torres",
+            "direccion": "Av. Juárez 5678",
+            "ciudad": "Guadalajara",
+            "pais": "México",
+            "telefono": "333-555-4444",
+            "email": "luis@example.com",
+            "foto": null
+        }
+    },
+    {
+        "model": "crudpy.cliente",
+        "pk": 50,
+        "fields": {
+            "nombre": "Cristina Vargas",
+            "direccion": "Calle 456, Colonia Centro",
+            "ciudad": "Puebla",
+            "pais": "México",
+            "telefono": "222-999-6666",
+            "email": "cristina@example.com",
+            "foto": null
+        }
+    }
+]

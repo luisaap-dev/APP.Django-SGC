@@ -1,0 +1,25 @@
+{% extends "crudpy/base.html" %}
+
+{% block title %}Página de Bienvenida{% endblock %}
+
+{% block content %}
+{% load static %}
+<!-- <link rel="stylesheet" href="{% static 'css/welcome_page.css' %}"> -->
+
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <h1>Bienvenido(a) a nuestra página</h1>
+        <p>¡Gracias por visitarnos! Esta es la página de bienvenida de nuestro sitio web. 
+        Aquí puedes agregar cualquier contenido que quieras mostrar a los usuarios cuando llegan a tu sitio.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Resto del código JavaScript -->
+<!-- <script src="{% static 'js/welcome_page.js' %}"></script >-->
+{% endblock %}

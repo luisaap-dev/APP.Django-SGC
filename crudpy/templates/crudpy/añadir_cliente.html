@@ -1,0 +1,104 @@
+{% extends "crudpy/base.html" %}
+{% block title %}Añadir Cliente{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/detalle_cliente.css' %}">
+<div class="card">
+   <div class="card-body">
+      <h2 class="card-title text-center">Añadir Cliente</h2>
+      <form id="addForm" method="post" enctype="multipart/form-data" class="container">
+         {% csrf_token %}
+         <div class="form-group row mb-2">
+            <label for="{{ form.nombre.id_for_label }}" class="col-sm-2 col-form-label">Nombre del cliente:</label>
+            <div class="col-sm-10">
+               {{ form.nombre }}
+               {{ form.nombre.errors }}
+            </div>
+         </div>
+         <div class="form-group row mb-2">
+            <label for="{{ form.direccion.id_for_label }}" class="col-sm-2 col-form-label">Dirección del cliente:</label>
+            <div class="col-sm-10">
+               {{ form.direccion }}
+               {{ form.direccion.errors }}
+            </div>
+         </div>
+         <div class="form-group row mb-2">
+            <label for="{{ form.ciudad.id_for_label }}" class="col-sm-2 col-form-label">Ciudad del cliente:</label>
+            <div class="col-sm-10">
+               {{ form.ciudad }}
+               {{ form.ciudad.errors }}
+            </div>
+         </div>
+         <div class="form-group row mb-2">
+            <label for="{{ form.pais.id_for_label }}" class="col-sm-2 col-form-label">País del cliente:</label>
+            <div class="col-sm-10">
+               {{ form.pais }}
+               {{ form.pais.errors }}
+            </div>
+         </div>
+         <div class="form-group row mb-2">
+            <label for="{{ form.telefono.id_for_label }}" class="col-sm-2 col-form-label">Número de teléfono del cliente:</label>
+            <div class="col-sm-10">
+               {{ form.telefono }}
+            </div>
+         </div>
+         <div class="form-group row mb-2">
+            <label for="{{ form.email.id_for_label }}" class="col-sm-2 col-form-label">Dirección de correo electrónico del cliente:</label>
+            <div class="col-sm-10">
+               {{ form.email }}
+            </div>
+         </div>
+         <div class="form-group row mb-2">
+            <div class="col-sm-10">
+               {{ form.foto }}
+               {{ form.foto.errors }}
+            </div>
+         </div>
+         <div class="text-center mt-3">
+            <button type="button" id="errorModalTrigger" class="btn btn-danger d-none" data-bs-toggle="modal" data-bs-target="#errorModal">
+            Mostrar Errores
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="errorModalLabel">Advertencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        <!-- Mostrar los mensajes de error aquí -->
+                        {% if form.email.errors %}
+                        <ul class="list-unstyled">
+                           {% if form.email.errors %}
+                           <li>{{ form.email.errors|join:", " }}</li>
+                           {% endif %}
+                           {% if form.telefono.errors %}
+                           <li>{{ form.telefono.errors|join:", " }}</li>
+                           {% endif %}
+                        </ul>
+                        {% endif %}
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="{% url 'listar_clientes' %}" class="btn btn-secondary">Cancelar</a>
+         </div>
+      </form>
+   </div>
+</div>
+<script src="{% static 'js/detalle_cliente.js' %}"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+       {% if form.email.errors or form.telefono.errors %}
+           // Si hay errores en los campos de correo electrónico o teléfono, muestra el modal automáticamente
+           var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+           errorModal.show();
+       {% endif %}
+   });
+</script>
+{% endblock %}

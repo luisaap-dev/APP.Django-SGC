@@ -1,0 +1,103 @@
+/* Estilos para la tarjeta que contiene el detalle del cliente */
+.card {
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+  padding: 20px;
+}
+
+/* Estilos para los párrafos dentro de la tarjeta */
+.card p {
+  margin-bottom: 8px;
+}
+
+/* Estilos para la imagen del cliente */
+.card img {
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* Estilos para aumentar el tamaño de la imagen al hacer hover */
+.card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones de acción */
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.btn-warning {
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #f2f3f5;
+  color: #1c1e21;
+}
+
+.btn-danger,
+.btn-danger:hover {
+  background-color: #e0245e;
+  color: #fff;
+}
+
+.btn-warning,
+.btn-warning:hover {
+  background-color: #fbbc05;
+  color: #fff;
+}
+
+/* Estilos para el perfil del cliente */
+.profile-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.profile-details {
+  padding: 10px 20px;
+}
+
+/* Estilos para el contenido modal */
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}

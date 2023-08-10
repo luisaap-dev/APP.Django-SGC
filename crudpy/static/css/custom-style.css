@@ -1,0 +1,40 @@
+/* Cambiar los colores de fondo y texto para que coincidan con el estilo de Apple */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la barra de navegación */
+.navbar-python{
+    background-color: #959B6D;
+}
+
+
+.navbar-brand img {
+    /* Alinear el logotipo en el centro verticalmente */
+    margin-top: 5px;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+th > a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s; /* Agregamos una transición suave para el cambio de color */
+}
+
+th > a:hover {
+    
+    color: #959B6D;
+}
+
+.th-custom-color:hover {
+    color: #959B6D !important;
+    cursor: pointer; /* Cambiar el cursor al puntero */
+}

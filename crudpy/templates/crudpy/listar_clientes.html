@@ -1,0 +1,149 @@
+{% extends "crudpy/base.html" %}
+
+{% block title %}
+    Crudpy
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link href="{% static 'css/custom-style.css' %}" rel="stylesheet">
+
+    <div class="container mt-4">
+        <!-- Formulario de búsqueda de clientes por nombre -->
+        <form class="text-center card mb-2" action="/listar_clientes/" method="get">
+            <div class="input-group">
+                <input class="form-control" type="text" name="search" value="{{ search_query }}" placeholder="Buscar por nombre" />
+                <button class="btn btn-primary " type="submit">Buscar</button>
+				
+    			<button type="submit"  class="btn btn-secondary" name="reset"  value="true">Reiniciar búsqueda</button>
+            </div>
+        </form>
+
+        <!-- Formulario para eliminar clientes seleccionados -->
+        <form class="text-center bg-light" action="/listar_clientes/" method="post">
+            {% csrf_token %}
+            <div class="table-responsive">
+                <table class="table table-bordered table table-striped table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th class="align-middle">
+                                <input type="checkbox" id="select-all" />
+                            </th>
+                            <!-- Encabezados de columna ordenables -->
+                            <th class="align-middle"><a href="?search={{ search_query }}&ordering=nombre" class="text-center">Nombre</a></th>
+                            <th class="align-middle"><a href="?search={{ search_query }}&ordering=direccion" class="text-center">Dirección</a></th>
+                            <th class="align-middle"><a href="?search={{ search_query }}&ordering=ciudad" class="text-center">Ciudad</a></th>
+                            <th class="align-middle"><a href="?search={{ search_query }}&ordering=pais" class="text-center">País</a></th>
+                            <th class="align-middle"><a href="?search={{ search_query }}&ordering=telefono" class="text-center">Teléfono</a></th>
+                            <th class="align-middle"><a href="?search={{ search_query }}&ordering=email" class="text-center">Email</a></th>
+                            <th class="align-middle th-custom-color">Foto</th>
+                            <th class="align-middle">
+                                <a href="{% url 'añadir_cliente' %}" class="btn btn-success text-center"><i class="fas fa-plus text-black"></i></a>
+                                <button type="button" class="btn btn-danger" onclick="checkAndDelete()"><i class="fas fa-trash text-black"></i></button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cliente in clientes %}
+                        <tr class="text-center">
+                            <td class="align-middle">
+                                <input type="checkbox" name="selected_clients" value="{{ cliente.id }}" />
+                            </td>
+                            <td class="align-middle">{{ cliente.nombre }}</td>
+                            <td class="align-middle">{{ cliente.direccion }}</td>
+                            <td class="align-middle">{{ cliente.ciudad }}</td>
+                            <td class="align-middle">{{ cliente.pais }}</td>
+                            <td class="align-middle">{{ cliente.telefono }}</td>
+                            <td class="align-middle">{{ cliente.email }}</td>
+                            <td class="align-middle">
+                                <div class="client-photo d-flex justify-content-center align-items-center">
+                                    {% if cliente.foto %}
+                                    <img src="{{ cliente.foto.url }}" alt="Foto del cliente" width="50" height="50" />
+                                    {% else %}
+                                    <img src="{% static 'img/default.png' %}" alt="default" class="rounded border" width="50" height="50" />
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td class="align-middle">
+                                <a href="{% url 'detalle_cliente' cliente_id=cliente.id %}" class="btn btn-primary rounded border d-flex justify-content-center align-items-center" style="width: 100%; height: 50px;">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+						<!-- Modal de eliminación -->
+						<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModal" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-body">
+										<p><strong>¿Estás seguro de eliminar?</strong></p>
+										<hr>
+										<button type="submit" class="btn btn-danger" data-bs-dismiss="modal" value="Eliminar">Eliminar</button>
+										<button type="button" class="btn btn-warning" data-bs-dismiss="modal" aria-label="Close" value="Cancelar">Cancelar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						<!-- Modal de advertencia -->
+						<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModal" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-body">
+										<p><strong>Debes seleccionar al menos un cliente</strong></p>
+										<hr>
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% if clientes.has_other_pages %}
+            <!-- Navegación de paginación -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <!-- Enlaces a páginas -->
+                    {% if clientes.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}" aria-label="Primera">
+                            <span aria-hidden="true">&laquo;&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ clientes.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}" aria-label="Anterior">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% for num in clientes.paginator.page_range %}
+                    <li class="page-item {% if num == clientes.number %}active{% endif %}">
+                        <a class="page-link" href="?page={{ num }}{% if search_query %}&search={{ search_query }}{% endif %}">{{ num }}</a>
+                    </li>
+                    {% endfor %}
+                    {% if clientes.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ clientes.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}" aria-label="Siguiente">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ clientes.paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}" aria-label="Última">
+                            <span aria-hidden="true">&raquo;&raquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </form>
+
+        
+
+    <!-- Archivo de script personalizado -->
+    <script src="{% static 'js/custom-script.js' %}"></script>
+{% endblock %}
