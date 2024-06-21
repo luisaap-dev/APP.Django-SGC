@@ -7,7 +7,7 @@ Este repositorio contiene un Sistema de Gestión de Clientes desarrollado en Dja
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/luisaap-dev/SGC-Django
+   git clone https://github.com/luisaap-dev/APP.Django-SGC.git
    ```
 
 2. Navega al directorio del proyecto:
